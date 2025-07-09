@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login_page.dart';
-import 'todolist_page.dart'; // เปลี่ยนจาก contacts_page.dart
+import 'todolist_page.dart'; // นำเข้า todolist_page โดยตรง
 
 void main() {
   runApp(const MyApp());
@@ -17,11 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Roboto',
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const LoginPage(),
-        '/todolist': (context) => const TodoListPage(), // เปลี่ยน route
-      },
+      home: const TodoListPage(), //  TodoListPage
       debugShowCheckedModeBanner: false,
     );
   }
