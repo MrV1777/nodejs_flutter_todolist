@@ -5,12 +5,12 @@ const db = mysql.createConnection({
   user: 'root',
   password: '',
   database: 'lodo_list',
-  port: 3306 // หรือ 3307 ตาม XAMPP/Laragon ของคุณ
+  port: 3306 
 });
 
 db.connect(err => {
   if (err) throw err;
-  console.log('✅ MySQL connected');
+  console.log(' MySQL connected');
 });
 
 module.exports = db;
