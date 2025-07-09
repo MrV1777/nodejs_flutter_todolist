@@ -6,7 +6,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF2C75D3), // สีพื้นหลังสีน้ำเงิน
+      backgroundColor: const Color(0xFF2C75D3), // Set background color (blue)
       body: Center(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(32.0),
@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              // หัวข้อ LOGIN
+              // Title: LOGIN
               const Text(
                 'LOGIN',
                 textAlign: TextAlign.center,
@@ -27,10 +27,10 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 48.0),
 
-              // ช่องกรอก Username
+              // Username TextField
               TextField(
                 decoration: InputDecoration(
-                  hintText: 'Username',
+                  hintText: 'Username', // Placeholder text
                   filled: true,
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
@@ -43,11 +43,11 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 16.0),
 
-              // ช่องกรอก Password
+              // Password TextField (obscure text for security)
               TextField(
-                obscureText: true, // ทำให้เป็น text รหัสผ่าน (แสดงเป็นจุด)
+                obscureText: true, // Hide input characters
                 decoration: InputDecoration(
-                  hintText: 'Password',
+                  hintText: 'Password', // Placeholder text
                   filled: true,
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
@@ -60,12 +60,11 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 32.0),
 
-              // ปุ่ม LOG IN
+              // LOG IN Button
               ElevatedButton(
                 onPressed: () {
-                  // เมื่อกดปุ่มจะไปยังหน้า To-Do List
-                  Navigator.pushReplacementNamed(
-                      context, '/todolist'); // เปลี่ยนจาก '/contacts'
+                  // Navigate to the To-Do List page when pressed
+                  Navigator.pushReplacementNamed(context, '/todolist');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF1E59A8),
